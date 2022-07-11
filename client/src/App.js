@@ -23,24 +23,9 @@ const App = () => {
             .post("http://localhost:6000/weather", { city })
             .then((res) => {
                 console.log("status", res.data);
-                // if (res.status === 200) {
-                //     console.log(res.data);
-                // } else {
-                //     setisError(true);
-                // }
-                // const weatherData = res.data.map((weather) => {
-                //     const { description, high, low } = weather;
-
-                //     return (
-                //         <div>
-                //             <p>{description}</p>
-                //             <p>{high}</p>
-                //             <p>{low}</p>
-                //         </div>
-                //     );
-                // });
+        
                 setWeatherData(res.data);
-                // setWeatherData(weatherData);
+    
                 setCity("");
             })
             .catch((error) => {
