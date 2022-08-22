@@ -3,7 +3,6 @@ const router = require("express").Router();
 let todos = [];
 
 router.get("/todos", (req, res) => {
-    // Get all todos
     if (todos.length === 0) {
         return res.send({ msg: "There is no todos", data: todos });
     }
