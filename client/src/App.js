@@ -54,7 +54,7 @@ const App = () => {
                 <input type='text' value={city} onChange={handleChage} />
             </div>
             {isError ? (
-                <div>
+                <div className='error'>
                     <p>Error</p>
                     <button onClick={() => setisError(false)}>
                         Dimiss Error
